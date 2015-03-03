@@ -4,7 +4,7 @@
   controller('mycontroller', ['$scope', function($scope){
       $scope.framework = 'ReactJs';
       $scope.data = [];
-      // Fill the data map with random data
+      // Fill the data map with random colors!
       function getRandomColor() {
           var letters = '0123456789ABCDEF'.split('');
           var color = '#';
@@ -13,6 +13,7 @@
           }
           return color;
       }
+
       $scope.refresh = function(){
           for(var i = 0; i < 2000; ++i) {
               $scope.data[i] = {};
@@ -22,7 +23,21 @@
           }
       }
       $scope.refresh()
-  }]).directive('fastRepeat', function(){
+  }])
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .directive('fastRepeat', function(){
       return{
           restrict: 'E',
           scope:{
